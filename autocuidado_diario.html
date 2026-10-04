@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>autocuidado diario</title>
+    <link rel="stylesheet" href="autocuidado_diario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="autocuidado_diario.js" defer></script>
+</head>
+<body>
+    <!--------------------------------------->
+    <!--|estructuracion_autocuidado_diario|-->
+    <!--------------------------------------->
+    <main class="contenedor">
+        <!-- Encabezado con título y fecha de hoy (la fecha la escribe el JS) -->
+        <header class="encabezado">
+            <h1>🌿 Autocuidado Diario</h1>
+            <p id="fecha"></p>
+        </header>
+        <!-- Progreso del día: barra, contador y mensaje de ánimo -->
+        <section class="progreso">
+            <div class="barra"><div class="relleno" id="relleno"></div></div>
+            <p class="contador" id="contador">0 de 5 consejos cumplidos</p>
+            <p class="animo" id="animo"></p>
+        </section>
+        <!-- Los cinco consejos: marca la casilla cuando lo cumplas hoy -->
+        <section class="consejos" id="consejos">
+            <!-- Consejo: Bebe agua -->
+            <article class="consejo" data-id="agua">
+                <span class="icono">💧</span>
+                <div class="texto">
+                    <h2>Bebe agua</h2>
+                    <p>Intenta tomar unos 8 vasos durante el día.</p>
+                </div>
+                <input type="checkbox" class="check" aria-label="Hecho hoy">
+            </article>
+            <!-- Consejo: Duerme bien -->
+            <article class="consejo" data-id="sueno">
+                <span class="icono">😴</span>
+                <div class="texto">
+                    <h2>Duerme bien</h2>
+                    <p>Procura descansar entre 7 y 8 horas cada noche.</p>
+                </div>
+                <input type="checkbox" class="check" aria-label="Hecho hoy">
+            </article>
+            <!-- Consejo: Muévete -->
+            <article class="consejo" data-id="movimiento">
+                <span class="icono">🚶</span>
+                <div class="texto">
+                    <h2>Muévete</h2>
+                    <p>Camina o haz ejercicio al menos 30 minutos.</p>
+                </div>
+                <input type="checkbox" class="check" aria-label="Hecho hoy">
+            </article>
+            <!-- Consejo: Come equilibrado -->
+            <article class="consejo" data-id="comida">
+                <span class="icono">🥗</span>
+                <div class="texto">
+                    <h2>Come equilibrado</h2>
+                    <p>Incluye frutas, verduras y evita saltarte comidas.</p>
+                </div>
+                <input type="checkbox" class="check" aria-label="Hecho hoy">
+            </article>
+            <!-- Consejo: Haz una pausa -->
+            <article class="consejo" data-id="pausa">
+                <span class="icono">🧘</span>
+                <div class="texto">
+                    <h2>Haz una pausa</h2>
+                    <p>Respira profundo y descansa la mente 5 minutos.</p>
+                </div>
+                <input type="checkbox" class="check" aria-label="Hecho hoy">
+            </article>
+        </section>
+        <!-- Nota personal del día (se guarda mientras escribes) -->
+        <section class="nota">
+            <label for="nota">📝 Mi nota de hoy</label>
+            <textarea id="nota" rows="3" placeholder="¿Cómo te sientes hoy?"></textarea>
+        </section>
+        <!-- Botón para desmarcar todos los consejos -->
+        <button id="btn-reiniciar" class="boton">Reiniciar el día</button>
+    </main>
+</body>
+</html>

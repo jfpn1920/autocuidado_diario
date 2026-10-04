@@ -1,0 +1,87 @@
+/* ===== Estilos generales ===== */
+/* Quita márgenes por defecto y facilita el cálculo de tamaños */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+/* Variables de color para reutilizarlas en todo el diseño */
+:root {
+    --fondo: #ecfdf5;
+    --tarjeta: #ffffff;
+    --principal: #10b981;
+    --oscuro: #065f46;
+    --texto: #1f2937;
+}
+/* Fondo y tipografía de toda la página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    padding: 24px 16px;
+}
+/* ===== Contenedor y encabezado ===== */
+/* Caja central que agrupa todo el contenido */
+.contenedor { max-width: 520px; margin: 0 auto; }
+/* Encabezado centrado */
+.encabezado { text-align: center; margin-bottom: 20px; }
+.encabezado h1 { color: var(--oscuro); margin-bottom: 6px; }
+.encabezado p { color: #6b7280; }
+.encabezado p::first-letter { text-transform: uppercase; }
+/* ===== Progreso ===== */
+/* Barra de progreso: fondo claro y relleno verde que crece */
+.barra { height: 14px; background: #a7f3d0; border-radius: 7px; overflow: hidden; }
+.relleno { width: 0; height: 100%; background: var(--principal); transition: width 0.4s; }
+/* Textos bajo la barra */
+.contador { margin-top: 8px; text-align: center; font-weight: bold; }
+.animo { margin: 4px 0 18px; text-align: center; color: var(--oscuro); }
+/* ===== Consejos ===== */
+/* Tarjeta de cada consejo: icono, texto y casilla en una fila */
+.consejo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    margin-bottom: 10px;
+    background: var(--tarjeta);
+    border-left: 6px solid #d1d5db;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: border-color 0.3s, opacity 0.3s;
+}
+/* Consejo cumplido: borde verde y un poco más tenue (clase que añade el JS) */
+.consejo.hecho { border-left-color: var(--principal); opacity: 0.75; }
+/* Icono grande a la izquierda */
+.icono { font-size: 2rem; }
+/* Texto del consejo: ocupa el espacio sobrante */
+.texto { flex: 1; }
+.texto h2 { font-size: 1.1rem; margin-bottom: 4px; }
+.texto p { font-size: 0.9rem; color: #6b7280; }
+/* Casilla de "hecho hoy" más grande */
+.check { width: 24px; height: 24px; accent-color: var(--principal); cursor: pointer; }
+/* ===== Nota y botón ===== */
+/* Zona de la nota personal */
+.nota { margin: 18px 0; }
+.nota label { display: block; margin-bottom: 6px; font-weight: bold; }
+/* Área de texto de la nota */
+.nota textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+}
+/* Resalta el área de texto cuando se está escribiendo en ella */
+.nota textarea:focus { outline: none; border-color: var(--principal); }
+/* Botón de reiniciar */
+.boton {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--oscuro);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Efecto al pasar el mouse por el botón */
+.boton:hover { opacity: 0.85; }
