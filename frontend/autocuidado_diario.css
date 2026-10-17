@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --fondo: #ecfdf5;
+    --tarjeta: #ffffff;
+    --principal: #10b981;
+    --oscuro: #065f46;
+    --texto: #1f2937;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    padding: 24px 16px;
+}
+/*--------------------------------*/
+/*--|estilos_autocuidado_diario|--*/
+/*--------------------------------*/
+.contenedor {
+    max-width: 520px;
+    margin: 0 auto;
+}
+.encabezado {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.encabezado h1 {
+    color: var(--oscuro);
+    margin-bottom: 6px;
+}
+.encabezado p {
+    color: #6b7280;
+}
+.encabezado p::first-letter {
+    text-transform: uppercase;
+}
+/*-------------------------------*/
+/*--|estilos_barra_de_progreso|--*/
+/*-------------------------------*/
+.barra {
+    height: 14px;
+    background: #a7f3d0;
+    border-radius: 7px;
+    overflow: hidden;
+}
+.relleno {
+    width: 0;
+    height: 100%;
+    background: var(--principal);
+    transition: width 0.4s;
+}
+.contador {
+    margin-top: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+.animo {
+    margin: 4px 0 18px;
+    text-align: center;
+    color: var(--oscuro);
+}
+/*----------------------------------*/
+/*--|estilos_tarjetas_de_consejos|--*/
+/*----------------------------------*/
+.consejo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    margin-bottom: 10px;
+    background: var(--tarjeta);
+    border-left: 6px solid #d1d5db;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: border-color 0.3s, opacity 0.3s;
+}
+.consejo.hecho {
+    border-left-color: var(--principal);
+    opacity: 0.75;
+}
+.icono {
+    font-size: 2rem;
+}
+.texto {
+    flex: 1;
+}
+.texto h2 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+.texto p {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+.check {
+    width: 24px;
+    height: 24px;
+    accent-color: var(--principal);
+    cursor: pointer;
+}
+/*---------------------------*/
+/*--|estilos_nota_personal|--*/
+/*---------------------------*/
+.nota {
+    margin: 18px 0;
+}
+.nota label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+.nota textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+}
+.nota textarea:focus {
+    outline: none;
+    border-color: var(--principal);
+}
+/*-------------------------------*/
+/*--|estilos_boton_de_reinicio|--*/
+/*-------------------------------*/
+.boton {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--oscuro);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.boton:hover {
+    opacity: 0.85;
+}
